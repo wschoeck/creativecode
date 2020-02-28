@@ -1,0 +1,172 @@
+h1 {
+  font-family: 'Red Hat Display';
+  font-weight: 800;
+  font-size: 4rem;
+  color: #bada55;
+  cursor: pointer;
+  text-align: center;
+  position: relative;
+}
+
+body {
+  background-color: #ffffff;
+  width: auto;
+  font-family: 'Red Hat Display';
+}
+
+.toogle {
+  background-color: orange;
+}
+
+.toogletype {
+  color: orange;
+  font-size: 8rem;
+  animation: typeanimation 6s infinite;
+}
+
+@keyframes typeanimation {
+  0% {color: orange;
+      transform-origin: 50% 50%;}
+  50% {color: #bd0143;
+      transform-origin: 50% 50%;}
+  100% {color: orange;
+        transform: translate(0px, 0px) rotate(360deg);
+        transform-origin: 50% 50%;}
+}
+
+
+div {
+  margin-bottom: 2rem;
+}
+
+.container {
+  display: grid;
+  height:100vh;
+  width: auto;
+  grid-template-columns: 15% 15% 15% 15% 15% 15%;
+  grid-template-rows: 100px 250px 200px 200px 100px;
+  grid-column-gap: 2%;
+  grid-row-gap: 0;
+  margin-left: 2%;
+  margin-right: 2%;
+
+}
+
+.columnone {
+  grid-column-start:1;
+  grid-column-end:3;
+  grid-row-start:1;
+  grid-row-end:1;
+  width: auto;
+  height: 200px;
+  background-color: #ffffff;
+}
+
+.columntwo {
+  grid-column-start:3;
+  grid-column-end:5;
+  grid-row-start:1;
+  grid-row-end:1;
+  width: auto;
+  height: 200px;
+  background-color: #ffffff;
+}
+
+.columnthree {
+  grid-column-start:5;
+  grid-column-end:7;
+  grid-row-start:1;
+  grid-row-end:1;
+  width: auto;
+  height: 200px;
+  background-color: #ffffff;
+}
+
+input {
+
+display: none;
+
+}
+
+
+label {
+
+cursor: pointer;
+
+}
+
+
+
+label:before {
+
+font-family: 'Red Hat Display';
+font-weight: 800;
+font-size: 2rem;
+line-height: 2rem;
+
+content: "This is a Headline";
+
+}
+
+input:checked+label.animation {
+
+color: orange;
+animation: cssanimation 6s infinite;
+content: "This is a Headline";
+
+}
+
+@keyframes cssanimation {
+  0% {color: orange;
+      transform-origin: 50% 50%;}
+  50% {color: #bd0143;
+      transform-origin: 50% 50%;}
+  100% {color: orange;
+        transform: translate(0px, 0px) rotate(360deg);
+        transform-origin: 50% 50%;}
+}
+
+
+input:checked+label:after {
+
+content: "close";
+display: block;
+
+}
+
+label:after {
+
+content: "more";
+
+}
+
+input+label:after {
+
+color: black;
+display: block;
+text-align: right;
+
+}
+
+
+p {
+
+overflow: hidden;
+
+transition: max-height 1.5s ease;
+
+}
+
+
+input:checked+label+p {
+
+max-height: 20em;
+
+}
+
+
+input:not(:checked)+label+p {
+
+max-height: 0em;
+
+}
