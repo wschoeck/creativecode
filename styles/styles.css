@@ -41,6 +41,11 @@ a {
   text-decoration: none;
 }
 
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+
 .button {
   background-color: #bd0143;
   width: 100px;
@@ -64,12 +69,10 @@ a {
 
 .left {
   display: block;
-  text-align: left;
 }
 
 .right {
   display: block;
-  text-align: right;
 }
 
 
