@@ -49,7 +49,7 @@ a {
   display: inline-block;
   text-align: center;
   margin: 4px 2px;
-  transition-duration: 0.4s;
+  transition: transform .6s .25s ease-out;
   cursor: pointer;
   font-size: 0.9rem;
   letter-spacing: 0.06rem;
@@ -58,9 +58,11 @@ a {
 
 .button:hover {
   background-color: #000000;
+  transform:scale(.9);
 }
 
 .flex {
+  display: inline-block;
 }
 
 .left {
