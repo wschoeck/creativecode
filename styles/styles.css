@@ -1,10 +1,19 @@
 h1 {
   font-family: 'Red Hat Display';
   font-weight: 800;
-  font-size: 4rem;
-  color: #bada55;
+  font-size: 2rem;
   cursor: pointer;
-  text-align: center;
+  text-align: left;
+  position: relative;
+  margin-bottom: 0;
+}
+
+h2 {
+  font-family: 'Red Hat Display';
+  font-weight: 400;
+  font-size: 1.2rem;
+  cursor: pointer;
+  text-align: left;
   position: relative;
 }
 
@@ -36,7 +45,7 @@ body {
 
 
 div {
-  margin-bottom: 2rem;
+  margin-bottom: 0;
 }
 
 .container {
@@ -92,27 +101,29 @@ display: none;
 label {
 
 cursor: pointer;
+display: flex;
 
 }
 
 
+div.animation {
 
-label:before {
+overflow: hidden;
+width: 100%;
 
-font-family: 'Red Hat Display';
-font-weight: 800;
-font-size: 2rem;
-line-height: 2rem;
-
-content: "This is a Headline";
+transition: max-height 1.5s ease;
 
 }
 
-input:checked+label.animation {
+input:checked+label>div.open>h2:after {
 
-color: orange;
-animation: cssanimation 6s infinite;
-content: "This is a Headline";
+content: "close";
+
+}
+
+input:not(:checked)+label>div.open>h2:after {
+
+content: "open";
 
 }
 
@@ -122,41 +133,27 @@ content: "This is a Headline";
   50% {color: #bd0143;
       transform-origin: 50% 50%;}
   100% {color: orange;
-        transform: translate(0px, 0px) rotate(360deg);
+        /* transform: translate(0px, 0px) rotate(360deg); */
         transform-origin: 50% 50%;}
 }
 
+input:not(:checked)+label>div.animation {
 
-input:checked+label:after {
-
-content: "close";
-display: block;
+/* max-height: 0em; */
 
 }
 
-label:after {
+input:checked+label>div.animation {
 
-content: "more";
-
-}
-
-input+label:after {
-
-color: black;
-display: block;
-text-align: right;
+/* max-height: 20em; */
+animation: cssanimation 6s infinite;
 
 }
 
-
-p {
-
-overflow: hidden;
-
-transition: max-height 1.5s ease;
-
+.open {
+  text-align: right;
+  color: #000000;
 }
-
 
 input:checked+label+p {
 
@@ -168,5 +165,12 @@ max-height: 20em;
 input:not(:checked)+label+p {
 
 max-height: 0em;
+
+}
+
+p {
+margin: 0;
+overflow: hidden;
+transition: max-height 1.5s ease;
 
 }
