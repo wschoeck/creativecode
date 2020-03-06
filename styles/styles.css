@@ -35,24 +35,20 @@ a:hover {
 
 */
 
-.Links {
-
-}
 
 a {
-
+  color: white;
+  text-decoration: none;
 }
 
 .button {
   background-color: #bd0143;
   width: 100px;
   border: none;
-  color: white;
   padding: 4px 2px;
-  text-align: center;
-  text-decoration: none;
-  margin: 4px 2px;
   display: inline-block;
+  text-align: center;
+  margin: 4px 2px;
   transition-duration: 0.4s;
   cursor: pointer;
   font-size: 0.9rem;
@@ -64,7 +60,16 @@ a {
   background-color: #000000;
 }
 
+.flex {
+}
+
+.left {
+  display: block;
+  text-align: left;
+}
+
 .right {
+  display: block;
   text-align: right;
 }
 
