@@ -62,11 +62,11 @@ a {
   letter-spacing: 0.06rem;
   font-weight: 600;
   transition: transform .6s .25s ease-out;
-  transition-duration: 0.4s;
+  transition-duration: 1s;
 }
 
 .button:hover {
-  transform:scale(.9);
+  transform: rotate3d(100,0,0,360deg);
 }
 
 .left {
