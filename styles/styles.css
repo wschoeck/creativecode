@@ -17,6 +17,7 @@ h2 {
   cursor: pointer;
   text-align: left;
   position: relative;
+  letter-spacing: 0.01rem;
 }
 
 /* a:link {
@@ -82,6 +83,7 @@ body {
   font-family: 'Red Hat Display';
   font-size: 1.2rem;
   line-height: 1.8rem;
+  letter-spacing: 0.01rem;
 }
 
 .toogle {
