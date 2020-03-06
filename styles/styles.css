@@ -49,20 +49,17 @@ a {
   display: inline-block;
   text-align: center;
   margin: 4px 2px;
-  transition: transform .6s .25s ease-out;
   cursor: pointer;
   font-size: 0.9rem;
   letter-spacing: 0.06rem;
   font-weight: 600;
+  transition: transform .6s .25s ease-out;
+  transition-duration: 0.4s;
 }
 
 .button:hover {
   background-color: #000000;
   transform:scale(.9);
-}
-
-.flex {
-  display: inline-block;
 }
 
 .left {
