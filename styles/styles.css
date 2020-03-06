@@ -17,6 +17,18 @@ h2 {
   position: relative;
 }
 
+a:link {
+  text-decoration: none;
+  font-size: 0.9rem;
+  letter-spacing: 0.07rem;
+  color: #bd0143;
+  font-weight: 600;
+}
+
+a:hover {
+  color: #000000;
+}
+
 body {
   background-color: #ffffff;
   width: auto;
@@ -53,7 +65,7 @@ div {
   height:100vh;
   width: auto;
   grid-template-columns: 15% 15% 15% 15% 15% 15%;
-  grid-template-rows: 100px 250px 200px 200px 100px;
+  grid-template-rows: 500px 250px 200px 200px 100px;
   grid-column-gap: 2%;
   grid-row-gap: 0;
   margin-left: 2%;
@@ -89,6 +101,15 @@ div {
   width: auto;
   height: 200px;
   background-color: #ffffff;
+}
+
+.columntwoLinks {
+  grid-column-start:3;
+  grid-column-end:5;
+  grid-row-start:2;
+  grid-row-end:2;
+  width: auto;
+  height: 200px;
 }
 
 input {
